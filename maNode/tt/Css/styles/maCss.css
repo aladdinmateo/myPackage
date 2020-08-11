@@ -1,0 +1,11 @@
+h1 {
+  color: #2f5572;
+  padding: 30px;
+  -moz-columns: 300px 2;
+       columns: 300px 2;
+}
+.bow s {
+    margin: 30px;
+    padding: 10px;
+    color: #2f5572;
+  }

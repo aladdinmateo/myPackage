@@ -1,0 +1,11 @@
+$darkBlue: #2f5572;
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $darkBlue;
+}
+img {
+  width: 100%;
+}
+h1 {
+  color: red;
+}
