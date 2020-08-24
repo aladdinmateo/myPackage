@@ -1,0 +1,51 @@
+.header {
+  font-weight: 300;
+  font-size: 1.7rem;
+  color: $darkBlue;
+
+  @mixin small {
+    font-size: 2.875rem;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-gold {
+    color: $maOrange;
+  }
+
+  &-small {
+    font-size: 1.2rem;
+
+    @mixin small {
+      font-size: 1.875rem;
+    }
+  }
+
+  &-raw {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-lite {
+    font-weight: 100;
+  }
+
+  strong {
+    font-weight: 400;
+  }
+
+  &-d-bot-margin {
+    margin-bottom: 0.5em;
+  }
+
+  &-i-bot-margin {
+    margin-bottom: 1.6em;
+  }
+
+  &-no-top-margin {
+    margin-top: 0px;
+  }
+}

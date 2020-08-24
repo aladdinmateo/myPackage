@@ -1,11 +1,16 @@
-$darkBlue: #2f5572;
 body {
   font-family: 'Roboto', sans-serif;
-  color: $darkBlue;
+  color: #333;
 }
 img {
   width: 100%;
+  height: auto;
 }
-h1 {
-  color: red;
+
+* {
+  box-sizing: border-box;
+}
+a {
+  color: $maOrange;
+  text-decoration: inherit;
 }
