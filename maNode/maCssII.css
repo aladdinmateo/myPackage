@@ -1,0 +1,14 @@
+$darkBlue: #2f5572;
+h1 {
+  color: $darkBlue;
+  padding: 30px;
+  -moz-columns: 300px 2;
+       columns: 300px 2;
+}
+.bow {
+  s {
+    margin: 30px;
+    padding: 10px;
+    color: $darkBlue;
+  }
+}
