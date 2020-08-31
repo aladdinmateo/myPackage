@@ -456,7 +456,7 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -467,7 +467,6 @@ img {
 
 a {
   color: #d59541;
-  text-decoration: inherit;
 }
 
 .large-hero {
@@ -669,7 +668,6 @@ a {
   }
 
 .row {
-
 /* .clear {
   clear: both;
 } */
@@ -691,8 +689,18 @@ a {
     margin-right: -65px;
   }
 
+.row-margin-bigger {
+    margin-right: -100px;
+  }
+
 .row-margin > div {
     padding-right: 65px;
+    /* max-width: 500px; */
+    /* box-sizing: border-box; */
+  }
+
+.row-margin-bigger > div {
+    padding-right: 100px;
     /* max-width: 500px; */
     /* box-sizing: border-box; */
   }
@@ -731,9 +739,23 @@ a {
     }
   }
 
+/* &_medium-6 {
+    text-align: center;
+    width: 100%;
+  } */
+
+@media (min-width: 530px) {
+      .row_medium-6 {
+      /* text-align: inherit; */
+      float: left;
+      width: 50%;
+    }
+  }
+
 .contain p {
+    font-weight: 300;
     line-height: 1.65;
-    margin: 1.8rem 0;
+    margin:0 0 1.8rem 0;
   }
 
 @media (min-width: 530px) {
@@ -746,3 +768,79 @@ a {
 .contain p a {
       font-weight: 700;
     }
+
+.section-title {
+  font-size: 2.55rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media (min-width: 530px) {
+
+.section-title {
+    font-size: 3.75rem
+}
+  }
+
+.section-title strong {
+    font-weight: 500;
+  }
+
+.section-title_icon {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0.6rem;
+  }
+
+@media (min-width: 530px) {
+
+.section-title_icon {
+      margin-right: 0.5rem;
+      margin-left: 0;
+      display: inline-block;
+      margin-bottom: 0
+  }
+  }
+
+.features {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 530px) {
+
+.features {
+    padding-left: 94px
+}
+  }
+
+.features_icon {
+    display: block;
+    margin: 0 auto;
+  }
+
+@media (min-width: 530px) {
+
+.features_icon {
+      position: absolute;
+      left: 0
+  }
+  }
+
+.features_title {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: 0.7rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+  }
+
+@media (min-width: 530px) {
+
+.features_title {
+      text-align: inherit;
+      margin-top: 1rem;
+      font-size: 1.875rem
+  }
+  }
