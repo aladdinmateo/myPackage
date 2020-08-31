@@ -1,6 +1,6 @@
 @import "normalize.css";
 @import "Body/_var";
-@import "Body/_mixins"; 
+@import "Body/_mixins";
 @import "Body/_global";
 @import "newStyle/_large-hero";
 @import "newStyle/_btn";
@@ -9,3 +9,5 @@
 @import "newStyle/_header";
 @import "newStyle/_row";
 @import "newStyle/_contain";
+@import "newStyle/_section-title";
+@import "newStyle/_features";

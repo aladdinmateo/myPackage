@@ -9,8 +9,18 @@
     margin-right: -65px;
   }
 
+  &-margin-bigger {
+    margin-right: -100px;
+  }
+
   &-margin > div {
     padding-right: 65px;
+    /* max-width: 500px; */
+    /* box-sizing: border-box; */
+  }
+
+  &-margin-bigger > div {
+    padding-right: 100px;
     /* max-width: 500px; */
     /* box-sizing: border-box; */
   }
@@ -49,6 +59,18 @@
     }
   }
 
+  /* &_medium-6 {
+    text-align: center;
+    width: 100%;
+  } */
+
+  @mixin small {
+      &_medium-6 {
+      /* text-align: inherit; */
+      float: left;
+      width: 50%;
+    }
+  }
 /* .clear {
   clear: both;
 } */
