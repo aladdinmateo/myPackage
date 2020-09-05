@@ -1,8 +1,14 @@
+/* do not change the _sprite.css diractly, instade change Gulp/template/sprite.css and it will change _sprite.css automaticly by Gulp*/
 {{#shapes}}
-.icon-{{base}} {
-  width: {{width.outer}}px;
-  height: {{height.outer}}px;
-  background-image: url('tt/Css/Sprite/css/{{{sprite}}}');
-  background-position: {{position.relative.xy}};
-}
+  {{#first}}
+  .icon {
+    background-image: url('/assets/images/sprite/{{{sprite}}}');
+  }
+  {{/first}}
+  .icon-{{base}} {
+    width: {{width.outer}}px;
+    height: {{height.outer}}px;
+
+    background-position: {{position.relative.xy}};
+  }
 {{/shapes}}
