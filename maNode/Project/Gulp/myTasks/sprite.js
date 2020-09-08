@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     sprite = require('gulp-svg-sprite'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    del = require('del');
 
 var config = {
       mode: {
@@ -15,7 +16,11 @@ var config = {
       }
     };
 
-gulp.task('createSprite', function() {
+gulp.task('beginClean', function() {
+  return del(['./tt/Css/Sprite', './tt/assets/images/sprite']);
+});
+
+gulp.task('createSprite', ['beginClean'], function() {
   return gulp.src('tt/assets/images/icons/**/*.svg')
   .pipe(sprite(config))
   .pipe(gulp.dest('tt/Css/Sprite/'));
@@ -32,4 +37,8 @@ gulp.task('copySpriteCss', ['createSprite'], function() {
   .pipe(gulp.dest('tt/Css/again/newStyle'));
 });
 
-gulp.task('icon', ['createSprite', 'copySpriteLocate', 'copySpriteCss']);
+gulp.task('cleanEnd', ['copySpriteLocate', 'copySpriteCss'], function() {
+  return del('./tt/Css/Sprite');
+});
+
+gulp.task('icon', ['beginClean', 'createSprite', 'copySpriteLocate', 'copySpriteCss', 'cleanEnd']);
