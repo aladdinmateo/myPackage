@@ -4,11 +4,12 @@ var gulp = require('gulp'),
     cssVars = require('postcss-simple-vars'),
     nested = require('postcss-nested'),
     mixins = require('postcss-mixins'),
-    importCss = require('postcss-import');
+    importCss = require('postcss-import'),
+    postHex = require('postcss-hexrgba');
 
 gulp.task('cssWork', function() {
   return gulp.src('tt/Css/again/maCssII.css')
-    .pipe(postCss([importCss, mixins, cssVars, nested, autoPrefix]))
+    .pipe(postCss([importCss, mixins, cssVars, nested, postHex, autoPrefix]))
     .on('error', function(errorFix) {
       console.log(errorFix.toString());
       this.emit('end');
