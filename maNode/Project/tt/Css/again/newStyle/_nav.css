@@ -1,7 +1,14 @@
 .proper-nav {
+  padding-top: 10px;
 
-  &_pull-right {
-    float: right;
+  @mixin medium {
+    padding-top: 0;
+  }
+
+    &_pull-right {
+      @mixin medium {
+        float: right;
+      }
   }
 
   ul {
@@ -12,8 +19,22 @@
 
   li {
     list-style: none;
-    float: left;
-    padding-right: 20px;
+    display: inline-block;
+    padding-right: 7px;
+
+    @mixin medium {
+      float: left;
+      display: block;
+      padding-right: 20px;
+    }
+  }
+
+  li:last-child {
+    padding-right: 0;
+
+    @mixin medium {
+      padding-right: 20px;
+    }
   }
 
   a {
@@ -21,6 +42,16 @@
     color: #FFF;
     font-weight: 300;
     display: block;
-    padding: 12px 0;
+    padding: 5px 8px;
+    margin-bottom: 12px;
+    font-size: 0.8rem;
+    background-color: rgba($darkBlue, 0.5);
+
+    @mixin medium {
+      font-size: 1rem;
+      padding: 12px 0;
+      background-color: transparent;
+      margin-bottom: 0;
+    }
   }
 }

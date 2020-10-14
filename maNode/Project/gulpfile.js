@@ -1,6 +1,7 @@
 require('./Gulp/myTasks/cssWork');
 require('./Gulp/myTasks/watch');
-require('./Gulp/myTasks/sprite')
+require('./Gulp/myTasks/sprite');
+require('./Gulp/myTasks/scripts');
 
 // var gulp = require('gulp'),
 //     watch = require('gulp-watch'),
