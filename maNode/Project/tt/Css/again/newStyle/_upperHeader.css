@@ -88,6 +88,10 @@
     }
   }
 
+  &_menu-icon:hover {
+    cursor: pointer;
+  }
+
   &_menu-icon-close-x {
     &::before {
       transform: rotate(45deg) scaleX(1.25);

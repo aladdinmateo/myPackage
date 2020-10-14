@@ -1277,6 +1277,10 @@ a {
   }
   }
 
+.upHeader_menu-icon:hover {
+    cursor: pointer;
+  }
+
 .upHeader_menu-icon-close-x::before {
       -webkit-transform: rotate(45deg) scaleX(1.25);
               transform: rotate(45deg) scaleX(1.25);
