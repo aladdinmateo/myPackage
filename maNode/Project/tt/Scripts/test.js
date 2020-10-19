@@ -1,6 +1,11 @@
 import Navigat from './main/mobileNav';
+import Revealer from './main/scrolling reveal';
+import $ from 'jquery';
 
 var NavigatMobile = new Navigat();
+new Revealer($(".features"), "85%");
+new Revealer($(".testimonial"), "60%");
+// var RevealTheSection = new Revealer();
 
 // var $ = require('jquery');
 //     //Someone = require('./main/Someone');
