@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10325,201 +10325,6 @@ return jQuery;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _mobileNav = __webpack_require__(2);
-
-var _mobileNav2 = _interopRequireDefault(_mobileNav);
-
-var _scrollingReveal = __webpack_require__(3);
-
-var _scrollingReveal2 = _interopRequireDefault(_scrollingReveal);
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var NavigatMobile = new _mobileNav2.default();
-new _scrollingReveal2.default((0, _jquery2.default)(".features"), "85%");
-new _scrollingReveal2.default((0, _jquery2.default)(".testimonial"), "60%");
-// var RevealTheSection = new Revealer();
-
-// var $ = require('jquery');
-//     //Someone = require('./main/Someone');
-// import Someone from './main/Someone';
-// // console.log(Someone.exampleProperty);
-// // Someone.exampleFunction();
-// class AppleEater extends Someone {
-//   extendsHand() {
-//     console.log(this.name + " can punch you from another country");
-//   }
-// }
-//
-// var mine = new Someone("arajin", "human");
-// mine.greet();
-//
-// var his = new AppleEater("luffy", "Gomu");
-// his.greet();
-// his.extendsHand();
-
-// $("h1").remove();
-// alert("yohohohohoho");
-
-// var my = {
-//   arg: " need to ",
-//   animal: " dog ",
-//   part: " piece ",
-//   greet: function() {
-//     console.log("hello");
-//   }
-// },
-//     his = {
-//       arg: " have to ",
-//       animal: " cat ",
-//       part: " top "
-//     };
-//
-
-// my.greet();
-
-// console.log("this's my new test text!!!");
-// console.log("this's my old test picture!!!");
-
-// function someone(arg, animal, part) {
-//   console.log("i" + arg + "feed my" + animal + "a" + part + "of cake");
-// }
-
-// myAnimal = " dog ",
-// myArg = " need ",
-// myPart = " piece ";
-
-// someone(my.arg, my.animal, my.part);
-// someone(his.arg, his.animal, his.part);
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Navigat = function () {
-  function Navigat() {
-    _classCallCheck(this, Navigat);
-
-    this.siteHeader = (0, _jquery2.default)(".upHeader");
-    this.navIcon = (0, _jquery2.default)(".upHeader_menu-icon");
-    this.navContent = (0, _jquery2.default)(".upHeader_menu");
-    this.events();
-    // $(".upHeader_menu-icon").click(function() {
-    //   alert("top right is clicked");
-  }
-
-  _createClass(Navigat, [{
-    key: "events",
-    value: function events() {
-      this.navIcon.click(this.toggleNav.bind(this));
-    }
-  }, {
-    key: "toggleNav",
-    value: function toggleNav() {
-      // alert(this);
-      this.navContent.toggleClass("upHeader_menu-is-visible");
-      // alert("top right is clicked");
-      this.siteHeader.toggleClass("upHeader-expand");
-      this.navIcon.toggleClass("upHeader_menu-icon-close-x");
-    }
-  }]);
-
-  return Navigat;
-}();
-
-exports.default = Navigat;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _noframework = __webpack_require__(4);
-
-var _noframework2 = _interopRequireDefault(_noframework);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Revealer = function () {
-  function Revealer(elmnt, ofst) {
-    _classCallCheck(this, Revealer);
-
-    this.revealedItem = elmnt; //$(".features, .testimonial");
-    this.offsetPercent = ofst;
-    this.hideTheRevealed();
-    this.firstWayPoint();
-  }
-
-  _createClass(Revealer, [{
-    key: 'hideTheRevealed',
-    value: function hideTheRevealed() {
-      this.revealedItem.addClass("reveal");
-    }
-  }, {
-    key: 'firstWayPoint',
-    value: function firstWayPoint() {
-      var that = this;
-      this.revealedItem.each(function () {
-        var singleItem = this;
-        new Waypoint({
-          element: singleItem,
-          handler: function handler() {
-            (0, _jquery2.default)(singleItem).addClass("reveal-is-visible");
-          },
-          offset: that.offsetPercent //"85%"
-        });
-        // alert("test");
-      });
-    }
-  }]);
-
-  return Revealer;
-}();
-
-exports.default = Revealer;
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports) {
 
 /*!
@@ -11280,6 +11085,678 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.Adapter = NoFrameworkAdapter
 }())
 ;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _mobileNav = __webpack_require__(3);
+
+var _mobileNav2 = _interopRequireDefault(_mobileNav);
+
+var _scrollingReveal = __webpack_require__(4);
+
+var _scrollingReveal2 = _interopRequireDefault(_scrollingReveal);
+
+var _fixedHeader = __webpack_require__(5);
+
+var _fixedHeader2 = _interopRequireDefault(_fixedHeader);
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var NavigatMobile = new _mobileNav2.default();
+new _scrollingReveal2.default((0, _jquery2.default)(".features"), "85%");
+new _scrollingReveal2.default((0, _jquery2.default)(".testimonial"), "60%");
+var FixedHeader = new _fixedHeader2.default();
+// var RevealTheSection = new Revealer();
+
+// var $ = require('jquery');
+//     //Someone = require('./main/Someone');
+// import Someone from './main/Someone';
+// // console.log(Someone.exampleProperty);
+// // Someone.exampleFunction();
+// class AppleEater extends Someone {
+//   extendsHand() {
+//     console.log(this.name + " can punch you from another country");
+//   }
+// }
+//
+// var mine = new Someone("arajin", "human");
+// mine.greet();
+//
+// var his = new AppleEater("luffy", "Gomu");
+// his.greet();
+// his.extendsHand();
+
+// $("h1").remove();
+// alert("yohohohohoho");
+
+// var my = {
+//   arg: " need to ",
+//   animal: " dog ",
+//   part: " piece ",
+//   greet: function() {
+//     console.log("hello");
+//   }
+// },
+//     his = {
+//       arg: " have to ",
+//       animal: " cat ",
+//       part: " top "
+//     };
+//
+
+// my.greet();
+
+// console.log("this's my new test text!!!");
+// console.log("this's my old test picture!!!");
+
+// function someone(arg, animal, part) {
+//   console.log("i" + arg + "feed my" + animal + "a" + part + "of cake");
+// }
+
+// myAnimal = " dog ",
+// myArg = " need ",
+// myPart = " piece ";
+
+// someone(my.arg, my.animal, my.part);
+// someone(his.arg, his.animal, his.part);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Navigat = function () {
+  function Navigat() {
+    _classCallCheck(this, Navigat);
+
+    this.siteHeader = (0, _jquery2.default)(".upHeader");
+    this.navIcon = (0, _jquery2.default)(".upHeader_menu-icon");
+    this.navContent = (0, _jquery2.default)(".upHeader_menu");
+    this.events();
+    // $(".upHeader_menu-icon").click(function() {
+    //   alert("top right is clicked");
+  }
+
+  _createClass(Navigat, [{
+    key: "events",
+    value: function events() {
+      this.navIcon.click(this.toggleNav.bind(this));
+    }
+  }, {
+    key: "toggleNav",
+    value: function toggleNav() {
+      // alert(this);
+      this.navContent.toggleClass("upHeader_menu-is-visible");
+      // alert("top right is clicked");
+      this.siteHeader.toggleClass("upHeader-expand");
+      this.navIcon.toggleClass("upHeader_menu-icon-close-x");
+    }
+  }]);
+
+  return Navigat;
+}();
+
+exports.default = Navigat;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Revealer = function () {
+  function Revealer(elmnt, ofst) {
+    _classCallCheck(this, Revealer);
+
+    this.revealedItem = elmnt; //$(".features, .testimonial");
+    this.offsetPercent = ofst;
+    this.hideTheRevealed();
+    this.firstWayPoint();
+  }
+
+  _createClass(Revealer, [{
+    key: 'hideTheRevealed',
+    value: function hideTheRevealed() {
+      this.revealedItem.addClass("reveal");
+    }
+  }, {
+    key: 'firstWayPoint',
+    value: function firstWayPoint() {
+      var that = this;
+      this.revealedItem.each(function () {
+        var singleItem = this;
+        new Waypoint({
+          element: singleItem,
+          handler: function handler(direct) {
+            if (direct == "down") {
+              (0, _jquery2.default)(singleItem).addClass("reveal-is-visible");
+            } else {
+              (0, _jquery2.default)(singleItem).removeClass("reveal-is-visible");
+            }
+          },
+          offset: that.offsetPercent //"85%"
+        });
+        // alert("test");
+      });
+    }
+  }]);
+
+  return Revealer;
+}();
+
+exports.default = Revealer;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+var _jquerySmoothScroll = __webpack_require__(6);
+
+var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var FixedHead = function () {
+  function FixedHead() {
+    _classCallCheck(this, FixedHead);
+
+    this.upHeader = (0, _jquery2.default)(".upHeader");
+    this.headerTrigger = (0, _jquery2.default)(".large-hero_para");
+    this.HeaderWaypoint();
+    this.section = (0, _jquery2.default)(".section");
+    this.headerLinks = (0, _jquery2.default)(".proper-nav a");
+    this.sectionWaypoints();
+    this.smoothOnScroll();
+  }
+
+  _createClass(FixedHead, [{
+    key: 'smoothOnScroll',
+    value: function smoothOnScroll() {
+      var that = this;
+      that.headerLinks.smoothScroll();
+    }
+  }, {
+    key: 'HeaderWaypoint',
+    value: function HeaderWaypoint() {
+      var that = this;
+      new Waypoint({
+        element: this.headerTrigger[0],
+        handler: function handler(direct) {
+          if (direct == "down") {
+            that.upHeader.addClass("upHeader-dark");
+          } else {
+            that.upHeader.removeClass("upHeader-dark");
+          }
+        }
+      });
+    }
+  }, {
+    key: 'sectionWaypoints',
+    value: function sectionWaypoints() {
+      var that = this;
+      this.section.each(function () {
+        var ourSection = this;
+        new Waypoint({
+          element: ourSection,
+          handler: function handler(direct) {
+            if (direct == "down") {
+              var matchingHlink = ourSection.getAttribute("data-matching-link");
+              that.headerLinks.removeClass("oranged-links");
+              (0, _jquery2.default)(matchingHlink).addClass("oranged-links");
+            }
+          },
+          offset: "40%"
+        });
+
+        new Waypoint({
+          element: ourSection,
+          handler: function handler(direct) {
+            if (direct == "up") {
+              var matchingHlink = ourSection.getAttribute("data-matching-link");
+              that.headerLinks.removeClass("oranged-links");
+              (0, _jquery2.default)(matchingHlink).addClass("oranged-links");
+            }
+          },
+          offset: "-40%"
+        });
+      });
+    }
+  }]);
+
+  return FixedHead;
+}();
+
+exports.default = FixedHead;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * jQuery Smooth Scroll - v2.2.0 - 2017-05-05
+ * https://github.com/kswedberg/jquery-smooth-scroll
+ * Copyright (c) 2017 Karl Swedberg
+ * Licensed MIT
+ */
+
+(function(factory) {
+  if (true) {
+    // AMD. Register as an anonymous module.
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof module === 'object' && module.exports) {
+    // CommonJS
+    factory(require('jquery'));
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function($) {
+
+  var version = '2.2.0';
+  var optionOverrides = {};
+  var defaults = {
+    exclude: [],
+    excludeWithin: [],
+    offset: 0,
+
+    // one of 'top' or 'left'
+    direction: 'top',
+
+    // if set, bind click events through delegation
+    //  supported since jQuery 1.4.2
+    delegateSelector: null,
+
+    // jQuery set of elements you wish to scroll (for $.smoothScroll).
+    //  if null (default), $('html, body').firstScrollable() is used.
+    scrollElement: null,
+
+    // only use if you want to override default behavior
+    scrollTarget: null,
+
+    // automatically focus the target element after scrolling to it
+    autoFocus: false,
+
+    // fn(opts) function to be called before scrolling occurs.
+    // `this` is the element(s) being scrolled
+    beforeScroll: function() {},
+
+    // fn(opts) function to be called after scrolling occurs.
+    // `this` is the triggering element
+    afterScroll: function() {},
+
+    // easing name. jQuery comes with "swing" and "linear." For others, you'll need an easing plugin
+    // from jQuery UI or elsewhere
+    easing: 'swing',
+
+    // speed can be a number or 'auto'
+    // if 'auto', the speed will be calculated based on the formula:
+    // (current scroll position - target scroll position) / autoCoeffic
+    speed: 400,
+
+    // coefficient for "auto" speed
+    autoCoefficient: 2,
+
+    // $.fn.smoothScroll only: whether to prevent the default click action
+    preventDefault: true
+  };
+
+  var getScrollable = function(opts) {
+    var scrollable = [];
+    var scrolled = false;
+    var dir = opts.dir && opts.dir === 'left' ? 'scrollLeft' : 'scrollTop';
+
+    this.each(function() {
+      var el = $(this);
+
+      if (this === document || this === window) {
+        return;
+      }
+
+      if (document.scrollingElement && (this === document.documentElement || this === document.body)) {
+        scrollable.push(document.scrollingElement);
+
+        return false;
+      }
+
+      if (el[dir]() > 0) {
+        scrollable.push(this);
+      } else {
+        // if scroll(Top|Left) === 0, nudge the element 1px and see if it moves
+        el[dir](1);
+        scrolled = el[dir]() > 0;
+
+        if (scrolled) {
+          scrollable.push(this);
+        }
+        // then put it back, of course
+        el[dir](0);
+      }
+    });
+
+    if (!scrollable.length) {
+      this.each(function() {
+        // If no scrollable elements and <html> has scroll-behavior:smooth because
+        // "When this property is specified on the root element, it applies to the viewport instead."
+        // and "The scroll-behavior property of the … body element is *not* propagated to the viewport."
+        // → https://drafts.csswg.org/cssom-view/#propdef-scroll-behavior
+        if (this === document.documentElement && $(this).css('scrollBehavior') === 'smooth') {
+          scrollable = [this];
+        }
+
+        // If still no scrollable elements, fall back to <body>,
+        // if it's in the jQuery collection
+        // (doing this because Safari sets scrollTop async,
+        // so can't set it to 1 and immediately get the value.)
+        if (!scrollable.length && this.nodeName === 'BODY') {
+          scrollable = [this];
+        }
+      });
+    }
+
+    // Use the first scrollable element if we're calling firstScrollable()
+    if (opts.el === 'first' && scrollable.length > 1) {
+      scrollable = [scrollable[0]];
+    }
+
+    return scrollable;
+  };
+
+  var rRelative = /^([\-\+]=)(\d+)/;
+
+  $.fn.extend({
+    scrollable: function(dir) {
+      var scrl = getScrollable.call(this, {dir: dir});
+
+      return this.pushStack(scrl);
+    },
+    firstScrollable: function(dir) {
+      var scrl = getScrollable.call(this, {el: 'first', dir: dir});
+
+      return this.pushStack(scrl);
+    },
+
+    smoothScroll: function(options, extra) {
+      options = options || {};
+
+      if (options === 'options') {
+        if (!extra) {
+          return this.first().data('ssOpts');
+        }
+
+        return this.each(function() {
+          var $this = $(this);
+          var opts = $.extend($this.data('ssOpts') || {}, extra);
+
+          $(this).data('ssOpts', opts);
+        });
+      }
+
+      var opts = $.extend({}, $.fn.smoothScroll.defaults, options);
+
+      var clickHandler = function(event) {
+        var escapeSelector = function(str) {
+          return str.replace(/(:|\.|\/)/g, '\\$1');
+        };
+
+        var link = this;
+        var $link = $(this);
+        var thisOpts = $.extend({}, opts, $link.data('ssOpts') || {});
+        var exclude = opts.exclude;
+        var excludeWithin = thisOpts.excludeWithin;
+        var elCounter = 0;
+        var ewlCounter = 0;
+        var include = true;
+        var clickOpts = {};
+        var locationPath = $.smoothScroll.filterPath(location.pathname);
+        var linkPath = $.smoothScroll.filterPath(link.pathname);
+        var hostMatch = location.hostname === link.hostname || !link.hostname;
+        var pathMatch = thisOpts.scrollTarget || (linkPath === locationPath);
+        var thisHash = escapeSelector(link.hash);
+
+        if (thisHash && !$(thisHash).length) {
+          include = false;
+        }
+
+        if (!thisOpts.scrollTarget && (!hostMatch || !pathMatch || !thisHash)) {
+          include = false;
+        } else {
+          while (include && elCounter < exclude.length) {
+            if ($link.is(escapeSelector(exclude[elCounter++]))) {
+              include = false;
+            }
+          }
+
+          while (include && ewlCounter < excludeWithin.length) {
+            if ($link.closest(excludeWithin[ewlCounter++]).length) {
+              include = false;
+            }
+          }
+        }
+
+        if (include) {
+          if (thisOpts.preventDefault) {
+            event.preventDefault();
+          }
+
+          $.extend(clickOpts, thisOpts, {
+            scrollTarget: thisOpts.scrollTarget || thisHash,
+            link: link
+          });
+
+          $.smoothScroll(clickOpts);
+        }
+      };
+
+      if (options.delegateSelector !== null) {
+        this
+        .off('click.smoothscroll', options.delegateSelector)
+        .on('click.smoothscroll', options.delegateSelector, clickHandler);
+      } else {
+        this
+        .off('click.smoothscroll')
+        .on('click.smoothscroll', clickHandler);
+      }
+
+      return this;
+    }
+  });
+
+  var getExplicitOffset = function(val) {
+    var explicit = {relative: ''};
+    var parts = typeof val === 'string' && rRelative.exec(val);
+
+    if (typeof val === 'number') {
+      explicit.px = val;
+    } else if (parts) {
+      explicit.relative = parts[1];
+      explicit.px = parseFloat(parts[2]) || 0;
+    }
+
+    return explicit;
+  };
+
+  var onAfterScroll = function(opts) {
+    var $tgt = $(opts.scrollTarget);
+
+    if (opts.autoFocus && $tgt.length) {
+      $tgt[0].focus();
+
+      if (!$tgt.is(document.activeElement)) {
+        $tgt.prop({tabIndex: -1});
+        $tgt[0].focus();
+      }
+    }
+
+    opts.afterScroll.call(opts.link, opts);
+  };
+
+  $.smoothScroll = function(options, px) {
+    if (options === 'options' && typeof px === 'object') {
+      return $.extend(optionOverrides, px);
+    }
+    var opts, $scroller, speed, delta;
+    var explicitOffset = getExplicitOffset(options);
+    var scrollTargetOffset = {};
+    var scrollerOffset = 0;
+    var offPos = 'offset';
+    var scrollDir = 'scrollTop';
+    var aniProps = {};
+    var aniOpts = {};
+
+    if (explicitOffset.px) {
+      opts = $.extend({link: null}, $.fn.smoothScroll.defaults, optionOverrides);
+    } else {
+      opts = $.extend({link: null}, $.fn.smoothScroll.defaults, options || {}, optionOverrides);
+
+      if (opts.scrollElement) {
+        offPos = 'position';
+
+        if (opts.scrollElement.css('position') === 'static') {
+          opts.scrollElement.css('position', 'relative');
+        }
+      }
+
+      if (px) {
+        explicitOffset = getExplicitOffset(px);
+      }
+    }
+
+    scrollDir = opts.direction === 'left' ? 'scrollLeft' : scrollDir;
+
+    if (opts.scrollElement) {
+      $scroller = opts.scrollElement;
+
+      if (!explicitOffset.px && !(/^(?:HTML|BODY)$/).test($scroller[0].nodeName)) {
+        scrollerOffset = $scroller[scrollDir]();
+      }
+    } else {
+      $scroller = $('html, body').firstScrollable(opts.direction);
+    }
+
+    // beforeScroll callback function must fire before calculating offset
+    opts.beforeScroll.call($scroller, opts);
+
+    scrollTargetOffset = explicitOffset.px ? explicitOffset : {
+      relative: '',
+      px: ($(opts.scrollTarget)[offPos]() && $(opts.scrollTarget)[offPos]()[opts.direction]) || 0
+    };
+
+    aniProps[scrollDir] = scrollTargetOffset.relative + (scrollTargetOffset.px + scrollerOffset + opts.offset);
+
+    speed = opts.speed;
+
+    // automatically calculate the speed of the scroll based on distance / coefficient
+    if (speed === 'auto') {
+
+      // $scroller[scrollDir]() is position before scroll, aniProps[scrollDir] is position after
+      // When delta is greater, speed will be greater.
+      delta = Math.abs(aniProps[scrollDir] - $scroller[scrollDir]());
+
+      // Divide the delta by the coefficient
+      speed = delta / opts.autoCoefficient;
+    }
+
+    aniOpts = {
+      duration: speed,
+      easing: opts.easing,
+      complete: function() {
+        onAfterScroll(opts);
+      }
+    };
+
+    if (opts.step) {
+      aniOpts.step = opts.step;
+    }
+
+    if ($scroller.length) {
+      $scroller.stop().animate(aniProps, aniOpts);
+    } else {
+      onAfterScroll(opts);
+    }
+  };
+
+  $.smoothScroll.version = version;
+  $.smoothScroll.filterPath = function(string) {
+    string = string || '';
+
+    return string
+      .replace(/^\//, '')
+      .replace(/(?:index|default).[a-zA-Z]{3,4}$/, '')
+      .replace(/\/$/, '');
+  };
+
+  // default options
+  $.fn.smoothScroll.defaults = defaults;
+
+}));
+
+
 
 /***/ })
 /******/ ]);

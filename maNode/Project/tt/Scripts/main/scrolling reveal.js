@@ -19,8 +19,12 @@ class Revealer {
       var singleItem = this;
       new Waypoint({
         element: singleItem,
-        handler: function() {
-          $(singleItem).addClass("reveal-is-visible");
+        handler: function(direct) {
+          if (direct == "down") {
+            $(singleItem).addClass("reveal-is-visible");
+          } else {
+            $(singleItem).removeClass("reveal-is-visible");
+          }
         },
         offset: that.offsetPercent //"85%"
       });

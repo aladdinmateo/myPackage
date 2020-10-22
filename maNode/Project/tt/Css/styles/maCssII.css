@@ -1179,8 +1179,13 @@ a {
 @media (min-width: 800px) {
 
 .upHeader {
+    position: fixed;
     background-color: rgba(213,149,65, 0.5)
 }
+
+    .upHeader-dark {
+      background-color: rgba(23, 51, 72, 0.85);
+    }
   }
 
 @media (min-width: 800px) {
@@ -1198,6 +1203,8 @@ a {
             transform: translateX(-50%) scale(0.8);
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
     background-color: #2f5572;
     padding: 25px 36px;
   }
@@ -1209,6 +1216,11 @@ a {
       -webkit-transform: translateX(0);
               transform: translateX(0)
   }
+
+      .upHeader-dark .upHeader_icon {
+        -webkit-transform: scale(0.57);
+                transform: scale(0.57);
+      }
   }
 
 .upHeader_icon-text {
@@ -1402,6 +1414,10 @@ a {
       background-color: transparent;
       margin-bottom: 0
   }
+
+      .proper-nav a.oranged-links {
+        color: #fabb69;
+      }
   }
 
 .reveal {
