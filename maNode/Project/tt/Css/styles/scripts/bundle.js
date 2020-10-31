@@ -11105,6 +11105,10 @@ var _fixedHeader = __webpack_require__(5);
 
 var _fixedHeader2 = _interopRequireDefault(_fixedHeader);
 
+var _modal = __webpack_require__(7);
+
+var _modal2 = _interopRequireDefault(_modal);
+
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -11115,6 +11119,7 @@ var NavigatMobile = new _mobileNav2.default();
 new _scrollingReveal2.default((0, _jquery2.default)(".features"), "85%");
 new _scrollingReveal2.default((0, _jquery2.default)(".testimonial"), "60%");
 var FixedHeader = new _fixedHeader2.default();
+var LinksModal = new _modal2.default();
 // var RevealTheSection = new Revealer();
 
 // var $ = require('jquery');
@@ -11757,6 +11762,72 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+  function Modal() {
+    _classCallCheck(this, Modal);
+
+    this.openModalB = (0, _jquery2.default)(".open-modal");
+    this.modal = (0, _jquery2.default)(".modal");
+    this.closeModalB = (0, _jquery2.default)(".modal_close");
+    this.events();
+  }
+
+  _createClass(Modal, [{
+    key: "events",
+    value: function events() {
+      //click the get in touch
+      this.openModalB.click(this.openModal.bind(this));
+      //clicl the x
+      this.closeModalB.click(this.closeModal.bind(this));
+      //push the Esc
+      (0, _jquery2.default)(document).keyup(this.keyPressing.bind(this));
+    }
+  }, {
+    key: "keyPressing",
+    value: function keyPressing(Esc) {
+      if (Esc.keyCode == 27) {
+        this.closeModal();
+      }
+    }
+  }, {
+    key: "openModal",
+    value: function openModal() {
+      this.modal.addClass("modal-is-visible");
+      return false;
+    }
+  }, {
+    key: "closeModal",
+    value: function closeModal() {
+      this.modal.removeClass("modal-is-visible");
+    }
+  }]);
+
+  return Modal;
+}();
+
+exports.default = Modal;
 
 /***/ })
 /******/ ]);

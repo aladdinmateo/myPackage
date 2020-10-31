@@ -17,5 +17,7 @@
 @import "newStyle/_upperHeader";
 @import "newStyle/_nav";
 @import "newStyle/_revealer";
+@import "newStyle/_modal";
+@import "newStyle/_social-icon"
 
 /* @import "../Sprite/css/sprite"; */

@@ -10,6 +10,10 @@
     max-width: 976px;
   }
 
+  &-smaller {
+    max-width: 470px;
+  }
+
   &-no-padding-medium {
     padding-left: 0;
     padding-right: 0;

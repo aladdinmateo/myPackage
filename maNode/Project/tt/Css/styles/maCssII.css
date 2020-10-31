@@ -555,6 +555,8 @@ a {
   text-decoration: none;
   padding: 0.75rem 1.2rem;
   display: inline-block;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .btn--orange {
@@ -572,6 +574,12 @@ a {
   }
   }
 
+.open-modal:hover {
+  background-color: #d59541;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
 .wrapper {
   overflow: hidden;
   padding-left: 18px;
@@ -583,6 +591,10 @@ a {
 
 .wrapper-medium {
     max-width: 976px;
+  }
+
+.wrapper-smaller {
+    max-width: 470px;
   }
 
 .wrapper-no-padding-medium {
@@ -947,6 +959,11 @@ a {
 
 .section-title_blue {
     color: #2f5572;
+  }
+
+.section-title-lessM {
+    margin-bottom: 1.3rem;
+    margin-top: 0;
   }
 
 .features {
@@ -1433,5 +1450,95 @@ a {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+
+.modal {
+  position: fixed;
+  z-index: 9;
+  background-color: rgba(255, 255, 255, 0.94);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.modal-is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+
+.modal_centerd {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+
+.modal_discrip {
+    text-align: center;
+    font-size: 1.3rem;
+    /* max-width: 500px;
+    margin: auto; */
+    font-weight: 300;
+    line-height: 1.65;
+  }
+
+.modal_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    -webkit-transform: scaleX(1.3);
+            transform: scaleX(1.3);
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+    color: #2f5572;
+  }
+
+.modal_close:hover {
+      color: #d59541;
+      cursor: pointer;
+    }
+
+.social-icon {
+  text-align: center;
+}
+
+.social-icon_icon {
+    background-color: #d59541;
+    display: inline-block;
+    margin: 0 5px 5px 5px;
+    width: 33%;
+    height: 70px;
+    position: relative;
+  }
+
+@media (min-width: 530px) {
+
+.social-icon_icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 5px
+  }
+  }
+
+.social-icon_icon .icon {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
 
 /* @import "../Sprite/css/sprite"; */

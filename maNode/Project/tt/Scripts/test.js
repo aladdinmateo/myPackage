@@ -1,13 +1,14 @@
 import Navigat from './main/mobileNav';
 import Revealer from './main/scrolling reveal';
 import FixedHead from './main/fixedHeader';
-
+import Modal from './main/modal';
 import $ from 'jquery';
 
 var NavigatMobile = new Navigat();
 new Revealer($(".features"), "85%");
 new Revealer($(".testimonial"), "60%");
 var FixedHeader = new FixedHead;
+var LinksModal = new Modal();
 // var RevealTheSection = new Revealer();
 
 // var $ = require('jquery');
